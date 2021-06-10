@@ -26,25 +26,17 @@
 // // Here we're not making use of vf-core's Sass include paths, and there's an issue around
 // // Plex's nesting of assets, so we manually import each font weight.
 // // This is also an annoyance present in IBM Plex's distro https://www.npmjs.com/package/@ibm/plex
-// $vf-font-plex-sans-prefix: "../../../../assets";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/bold/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/extralight/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/italic/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/light/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/regular/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/medium/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/semibold/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/text/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/thin/_index.scss";
+$vf-font-plex-sans-prefix: "@visual-framework/vf-font-plex-sans/assets";
 
-// $vf-font-plex-sans-prefix: "../../../../../assets";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/bold/italic/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/extralight/italic/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/light/italic/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/medium/italic/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/semibold/italic/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/text/italic/_index.scss";
-// @import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/thin/italic/_index.scss";
+@import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/bold/_index.scss";
+@import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/extralight/_index.scss";
+@import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/italic/_index.scss";
+@import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/light/_index.scss";
+@import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/regular/_index.scss";
+@import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/medium/_index.scss";
+@import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/semibold/_index.scss";
+@import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/text/_index.scss";
+@import "node_modules/@visual-framework/vf-font-plex-sans/assets/scss/sans/thin/_index.scss";
 
 html,
 button {
