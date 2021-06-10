@@ -16,11 +16,11 @@ export default function News() {
       {firstNews && (
         <div style={{border: '1px solid lightgrey'}}>
           <a
-            class='block'
+            className='block'
             href='https://www.ebi.ac.uk/about/news/announcements/visualising-rna-structures-using-r2dt'>
             <img src={firstNews.field_image.src} />
           </a>
-          <div class='' style={{}}>
+          <div className='' style={{}}>
             <a href={firstNews.path}>
               <small>09 Jun 2021</small>
               <p>Visualising RNA structures using R2DT</p>
@@ -29,7 +29,7 @@ export default function News() {
         </div>
       )}
       {news.map(item => (
-        <NewsItem newsItem={item.node} />
+        <NewsItem newsItem={item.node} key={item.node.path} />
       ))}
     </div>
   )
@@ -37,11 +37,11 @@ export default function News() {
 
 const NewsItem = ({ newsItem }) => {
   return (
-    <div>
+    <>
       <a href={newsItem.path}>
         <h3>{newsItem.title}</h3>
         <p>{newsItem.body}</p>
       </a>
-    </div>
+    </>
   )
 }
