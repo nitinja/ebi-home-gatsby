@@ -194,3 +194,6 @@ button {
 // If you have any local overrides, put them in:
 // @import '../vf-sample/vf-sample.scss';
 // @import "../vf-local-overrides/vf-local-overrides.scss";
+
+// ideally we don't need this, but there are some nested divs required for gatsby
+body { margin: 0; }
