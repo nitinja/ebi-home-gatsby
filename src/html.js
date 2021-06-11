@@ -7,14 +7,7 @@ export default function HTML(props) {
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
         {props.headComponents}
-        {/* For the legacy 1.x EBI Global head (black bar) */}
-        <script src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js"></script>
-        <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
