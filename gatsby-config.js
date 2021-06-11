@@ -7,6 +7,9 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     {
+      sassOptions: {
+        includePaths: require('path').resolve(__dirname, 'node_modules'),
+      },
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
