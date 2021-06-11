@@ -15,7 +15,7 @@ export default function Events() {
   return (
     <div>
       {events.map(item => (
-        <EventItem eventItem={item} />
+        <EventItem eventItem={item} key={item.id} />
       ))}
     </div>
   )

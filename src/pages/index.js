@@ -7,20 +7,13 @@ import News from "../components/News";
 import Events from "../components/Events";
 import { EBICards } from "../components/EBICards";
 
-// styles
-const pageStyles = {
-  // color: "#232129",
-  // padding: 96,
-  // fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-
 // markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
+    <>
       <Helmet
         bodyAttributes={{
-          class: 'vf-body | vf-stack vf-stack--400'
+          class: ''
         }}>
         <title>The European Bioinformatics Institute &lt; EMBL-EBI</title>
       </Helmet>
@@ -34,8 +27,8 @@ const IndexPage = () => {
 
             <p className="vf-hero__subheading">The home for big data in biology</p>
             <p className="vf-hero__text">We help scientists exploit complex information to make discoveries that benefit humankind.</p>
-            <p className="vf-hero__text" style={{ paddingTop: 14, color: '#fff;' }}>
-              <a style={{ color: '#fff;', textDecoration: 'underline' }} href="//www.ebi.ac.uk/services/">Find tools and resources</a> or <a style={{ color: '#fff;', textDecoration: 'underline' }} href="//www.ebi.ac.uk/submission/">deposit data</a>.
+            <p className="vf-hero__text" style={{ paddingTop: 14, color: '#fff' }}>
+              <a style={{ color: '#fff', textDecoration: 'underline' }} href="//www.ebi.ac.uk/services/">Find tools and resources</a> or <a style={{ color: '#fff', textDecoration: 'underline' }} href="//www.ebi.ac.uk/submission/">deposit data</a>.
           </p>
           </div>
           <form id="ebi_search" action="/ebisearch/search.ebi" className="vf-box" style={{ "color": "#222", height: 150 }}>
@@ -68,7 +61,6 @@ const IndexPage = () => {
                   <optgroup label="Search web content">
                     <option value="ebiweb_people">EMBL-EBI People</option>
                     <option value="ebiweb">EMBL-EBI web</option>
-
                   </optgroup>
                 </select>
               </div>
@@ -88,13 +80,13 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section style={{ display: 'flex' }}>
-        <div style={{width:'70%', paddingRight:'1rem'}}>
-          <h2>Featured Topic</h2>
+      <section className="vf-grid vf-grid__col-3 | vf-content">
+        <div className="vf-grid__col--span-2">
+          <h3>Featured Topic</h3>
           <article className="vf-card vf-card--brand vf-card--striped" style={{ backgroundColor: 'rgb(59,73,80)', '--vf-card-bg-color': 'rgb(59,73,80)' }}>
             <img src="https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/Covid19_Data_Portal_screenshot.png" alt="Image alt text" className="vf-card__image" loading="lazy" />
             <div className="vf-card__content | vf-stack vf-stack--400">
-              <h3 className="vf-card__heading"><a className="vf-card__link" href="JavaScript:Void(0);">
+              <h3 className="vf-card__heading"><a className="vf-card__link" href="#">
                 Our coronavirus response
                   </a></h3>
               <p className="vf-card__subheading">Since the start of the pandemic, we’ve been working to make SARS-CoV-2 data openly available to the global research community, to uncover new insights and enable discovery.</p>
@@ -103,19 +95,18 @@ const IndexPage = () => {
           </article>
         </div>
         <div>
-          <h2>Latest News</h2>
+          <h3>Latest News</h3>
           <News />
-          <h2>Our events</h2>
+          <h3>Our events</h3>
           <Events />
         </div>
       </section>
-      <section className="vf-u-margin__top--800 vf-u-margin__bottom--800 vf-content" style={{ backgroundColor:"#f3f3f3", padding: '1rem'}}>
+      <section className="vf-u-margin__top--800 vf-u-padding__bottom--800 vf-content | vf-u-fullbleed" style={{ backgroundColor:"#f3f3f3" }}>
         <div className="vf-grid vf-grid__col-3">
           <a href="//www.ebi.ac.uk/about/our-impact" className="column no-underline"  style={{height:138}}>
             <p>
             </p><h3 className="black-color margin-bottom-none vf-section-header__heading">
               <div className="inline-block">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="#000000" stroke="#000000" height="20" width="30"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><circle cx="12.009" cy="12.009" r="2.25" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle><ellipse cx="12.009" cy="12.009" rx="15" ry="5.25" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse><ellipse cx="12.009" cy="12.009" rx="5.25" ry="15" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse></g></svg>
                 We are EMBL-EBI</div>
             </h3>
             <p>The European Bioinformatics Institute (EMBL-EBI) is part of EMBL, Europe’s flagship laboratory for the life sciences. More about EMBL-EBI and our impact.</p>
@@ -126,7 +117,6 @@ const IndexPage = () => {
             </p><h4 className="vf-section-header__heading services-color">
 
               <div className="inline-block">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="#000000" stroke="#000000" height="20" width="30"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><circle cx="12.009" cy="12.009" r="2.25" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle><ellipse cx="12.009" cy="12.009" rx="15" ry="5.25" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse><ellipse cx="12.009" cy="12.009" rx="5.25" ry="15" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse></g></svg>
                 Data resources</div>
             </h4>
             <p>Explore our open data resources to enrich your research. Browse data, perform analyses or share your own results.</p>
@@ -136,7 +126,6 @@ const IndexPage = () => {
             <p>
             </p><h4 className="vf-section-header__heading research-color"><span className="icon icon-generic" data-icon=")"></span>
               <div className="inline-block">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="#000000" stroke="#000000" height="20" width="30"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><circle cx="12.009" cy="12.009" r="2.25" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle><ellipse cx="12.009" cy="12.009" rx="15" ry="5.25" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse><ellipse cx="12.009" cy="12.009" rx="5.25" ry="15" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse></g></svg>
                 Research</div>
             </h4>
             <p>Find out about our research groups, postdoctoral schemes and PhD Programme.</p>
@@ -146,7 +135,6 @@ const IndexPage = () => {
             <p>
             </p><h4 className="vf-section-header__heading training-color"><span className="icon icon-generic" data-icon="t"></span>
               <div className="inline-block">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="#000000" stroke="#000000" height="20" width="30"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><circle cx="12.009" cy="12.009" r="2.25" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle><ellipse cx="12.009" cy="12.009" rx="15" ry="5.25" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse><ellipse cx="12.009" cy="12.009" rx="5.25" ry="15" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse></g></svg>
                 Training</div>
             </h4>
             <p>Access a wealth of world-leading training in bioinformatics and scientific service provision,
@@ -157,7 +145,6 @@ const IndexPage = () => {
             <p>
             </p><h4 className="vf-section-header__heading industry-color"><span className="icon icon-generic" data-icon="I"></span>
               <div className="inline-block">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="#000000" stroke="#000000" height="20" width="30"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><circle cx="12.009" cy="12.009" r="2.25" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle><ellipse cx="12.009" cy="12.009" rx="15" ry="5.25" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse><ellipse cx="12.009" cy="12.009" rx="5.25" ry="15" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse></g></svg>
                 Industry</div>
             </h4>
             <p>Explore our knowledge-exchange Industry Programme and take part in translational partnerships and projects.</p>
@@ -167,7 +154,6 @@ const IndexPage = () => {
             <p>
             </p><h4 className="vf-section-header__heading elixir-color"><span className="icon icon-generic" data-icon="%"></span>
               <div className="inline-block">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="#000000" stroke="#000000" height="20" width="30"><g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)"><circle cx="12.009" cy="12.009" r="2.25" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle><ellipse cx="12.009" cy="12.009" rx="15" ry="5.25" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse><ellipse cx="12.009" cy="12.009" rx="5.25" ry="15" transform="rotate(-45 12.01 12.009)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></ellipse></g></svg>
                 ELIXIR</div>
             </h4>
             <p>We support, as an ELIXIR node, the coordination of biological data provision throughout Europe.</p>
@@ -178,7 +164,7 @@ const IndexPage = () => {
       <EBICards />
 
       <EmblFooter />
-    </main>
+    </>
   )
 }
 
