@@ -166,7 +166,7 @@ button {
 /* EBI Specific components */
 // ebi-header-footer is not enabled by default
 // this may change as more EBI sites move to "pure" sVF 2.0
-// @import 'ebi-header-footer/ebi-header-footer.scss';
+@import "@visual-framework/ebi-header-footer/ebi-header-footer.scss";
 // @import 'node_modules/@visual-framework/ebi-vf1-integration/ebi-vf1-integration.scss';
 
 /* All Visual Framework Utility and high-specificity components */
