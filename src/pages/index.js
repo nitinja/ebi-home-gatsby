@@ -6,23 +6,12 @@ import { Helmet } from "react-helmet";
 import News from "../components/News";
 import Events from "../components/Events";
 import { EBICards } from "../components/EBICards";
+import EBIPageContainer from "../components/EBIPageContainer";
 
 // markup
 const IndexPage = () => {
   return (
-    <>
-      <Helmet
-        bodyAttributes={{
-          class: ''
-        }}>
-        <title>The European Bioinformatics Institute &lt; EMBL-EBI</title>
-        {/* For the legacy 1.x EBI Global head (black bar) */}
-        <script defer="defer" src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js"></script>
-        <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
-      </Helmet>
-
-      <EmblHeader />
-
+    <EBIPageContainer>
       <section className="vf-hero | vf-u-fullbleed" style={{ "--vf-hero--bg-image": "url('https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/EBI_webbanner_test_V3.jpg')", backgroundPosition: "initial" }}>
         <div className="vf-hero__content | vf-grid vf-grid__col-2" style={{ backgroundColor: 'transparent', color: '#fff', gridGap: 0, boxShadow: 'none' }}>
           <div className="vf-hero__content | vf-box | vf-stack vf-stack--400" style={{ backgroundColor: 'transparent', color: '#fff' }}>
@@ -104,9 +93,9 @@ const IndexPage = () => {
           <Events />
         </div>
       </section>
-      <section className="vf-u-margin__top--800 vf-u-padding__bottom--800 vf-content | vf-u-fullbleed" style={{ backgroundColor:"#f3f3f3" }}>
+      <section className="vf-u-margin__top--800 vf-u-padding__bottom--800 vf-content | vf-u-fullbleed" style={{ backgroundColor: "#f3f3f3" }}>
         <div className="vf-grid vf-grid__col-3">
-          <a href="//www.ebi.ac.uk/about/our-impact" className="column no-underline"  style={{height:138}}>
+          <a href="//www.ebi.ac.uk/about/our-impact" className="column no-underline" style={{ height: 138 }}>
             <p>
             </p><h3 className="black-color margin-bottom-none vf-section-header__heading">
               <div className="inline-block">
@@ -115,7 +104,7 @@ const IndexPage = () => {
             <p>The European Bioinformatics Institute (EMBL-EBI) is part of EMBL, Europe’s flagship laboratory for the life sciences. More about EMBL-EBI and our impact.</p>
             <p></p>
           </a>
-          <a href="//www.ebi.ac.uk/services" className="column no-underline"  style={{height:138}}>
+          <a href="//www.ebi.ac.uk/services" className="column no-underline" style={{ height: 138 }}>
             <p>
             </p><h4 className="vf-section-header__heading services-color">
 
@@ -125,7 +114,7 @@ const IndexPage = () => {
             <p>Explore our open data resources to enrich your research. Browse data, perform analyses or share your own results.</p>
             <p></p>
           </a>
-          <a href="//www.ebi.ac.uk/research" className="column no-underline"  style={{height:138}}>
+          <a href="//www.ebi.ac.uk/research" className="column no-underline" style={{ height: 138 }}>
             <p>
             </p><h4 className="vf-section-header__heading research-color"><span className="icon icon-generic" data-icon=")"></span>
               <div className="inline-block">
@@ -134,7 +123,7 @@ const IndexPage = () => {
             <p>Find out about our research groups, postdoctoral schemes and PhD Programme.</p>
             <p></p>
           </a>
-          <a href="//www.ebi.ac.uk/training" className="column no-underline"  style={{height:138}}>
+          <a href="//www.ebi.ac.uk/training" className="column no-underline" style={{ height: 138 }}>
             <p>
             </p><h4 className="vf-section-header__heading training-color"><span className="icon icon-generic" data-icon="t"></span>
               <div className="inline-block">
@@ -144,7 +133,7 @@ const IndexPage = () => {
                   regardless of your career stage or sector.</p>
             <p></p>
           </a>
-          <a href="//www.ebi.ac.uk/industry" className="column no-underline"  style={{height:138}}>
+          <a href="//www.ebi.ac.uk/industry" className="column no-underline" style={{ height: 138 }}>
             <p>
             </p><h4 className="vf-section-header__heading industry-color"><span className="icon icon-generic" data-icon="I"></span>
               <div className="inline-block">
@@ -153,7 +142,7 @@ const IndexPage = () => {
             <p>Explore our knowledge-exchange Industry Programme and take part in translational partnerships and projects.</p>
             <p></p>
           </a>
-          <a href="https://www.elixir-europe.org" className="column no-underline"  style={{height:138}}>
+          <a href="https://www.elixir-europe.org" className="column no-underline" style={{ height: 138 }}>
             <p>
             </p><h4 className="vf-section-header__heading elixir-color"><span className="icon icon-generic" data-icon="%"></span>
               <div className="inline-block">
@@ -166,8 +155,7 @@ const IndexPage = () => {
       </section>
       <EBICards />
 
-      <EmblFooter />
-    </>
+    </EBIPageContainer>
   )
 }
 

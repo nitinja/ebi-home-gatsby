@@ -1,0 +1,29 @@
+.wizard-head-row {
+    display: flex;
+    align-items: center;
+    .num-round {
+        width:2rem;
+        height:2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: teal;
+        color: #fff;
+        margin-right: 1rem;
+    }
+    margin-bottom: 1rem;
+}
+
+.wizard-content-row {
+    width:800px;
+    display: flex;
+    flex-wrap: wrap;
+    .choice {
+        display: inline-block;
+        color: #fff;
+        background-color: teal;
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+}
