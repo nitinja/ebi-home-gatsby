@@ -170,11 +170,6 @@ export default function SubmissionWizard() {
   }
   return (
     <div style={{ marginBottom: '2rem' }}>
-      {/* <div className='wizard-head-row'>
-        <div className='num-round'>1</div>
-        <div>What type of data do you have?</div>
-      </div>
-      <div className='wizard-content-row'>content</div> */}
       {levels.map((item, index) => item.destination ? renderDestination(item) : renderLevel(item, index + 1, selectChoice))}
     </div>
   )
@@ -182,7 +177,7 @@ export default function SubmissionWizard() {
 
 function renderLevel(level, index, selectChoice) {
   return (
-    <>
+    <div key={index}>
       <div className='wizard-head-row'>
         <div className='num-round'>{index}</div>
         <div>
@@ -196,22 +191,23 @@ function renderLevel(level, index, selectChoice) {
         {level.choices &&
           level.choices.map(choice => (
             <a
-              href=''
+              href='http://something'
               onClick={e => {
                 e.preventDefault()
                 selectChoice(choice)
               }}
+              key={ choice.name}
               className='choice'>
               {choice.name}
             </a>
           ))}
       </div>
-    </>
+    </div>
   )
 }
 
 function renderDestination({ destination }) {
-    return <div className='destination'>
+  return <div key={destination} className='destination'>
         :::: <div>{destination} &gt;&gt;</div>
     </div>;
 }

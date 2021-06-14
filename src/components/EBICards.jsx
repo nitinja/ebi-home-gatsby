@@ -17,10 +17,10 @@ export function EBICards() {
       <VFCard
         card_image='https://www.ebi.ac.uk/sites/ebi.ac.uk/files/shared/images/PHOTOS/Data_Centre/EBI_Data_Centre_Best.jpg'
         card_image__alt='EMBL-EBI staff members'
-        card_heading='Employee benefits'
+        card_heading='Data Submission'
         card_subheading=''
         card_text='We value your skills, wherever you may come from and we offer a generous benefits package to support you.'
-        card_href='//www.ebi.ac.uk/about/jobs/benefits'
+        card_href='/submission'
         newTheme='primary'
         modifiers='vf-card--bordered'
       />
@@ -28,10 +28,10 @@ export function EBICards() {
       <VFCard
         card_image='https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/AdobeStock_245533971_900x500.jpeg'
         card_image__alt='Visual of the world with connecting lines'
-        card_heading='International applicants'
+        card_heading='Careers'
         card_subheading=''
         card_text='Join an inclusive community of 850+ employees from over 78 countries and get unparalleled support with visa sponsorship.'
-        card_href='//www.ebi.ac.uk/about/jobs/benefits'
+        card_href='/careers'
         newTheme='primary'
         modifiers='vf-card--bordered'
       />

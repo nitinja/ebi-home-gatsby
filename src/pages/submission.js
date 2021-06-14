@@ -1,15 +1,9 @@
-import * as React from "react"
-import { EmblHeader } from "../components/EmblHeader";
-import { EmblFooter } from "../components/EmblFooter";
-import './styles.scss';
-import { Helmet } from "react-helmet";
-import News from "../components/News";
-import Events from "../components/Events";
-import { EBICards } from "../components/EBICards";
-import EBIPageContainer from "../components/EBIPageContainer";
+import { vfTabs } from '@visual-framework/vf-tabs';
+import * as React from "react";
 import { useEffect } from "react";
-import {vfTabs} from '@visual-framework/vf-tabs'
+import EBIPageContainer from "../components/EBIPageContainer";
 import SubmissionWizard from "../components/SubmissionWizard";
+import './styles.scss';
 
 // markup
 const Submission = () => {
