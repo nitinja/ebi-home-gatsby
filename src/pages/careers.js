@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { emblContentHub } from "@visual-framework/embl-content-hub-loader/embl-content-hub-loader";
 import EBIPageContainer from '../components/EBIPageContainer';
+import './styles.scss';
 
 
 export default function Careers() {
