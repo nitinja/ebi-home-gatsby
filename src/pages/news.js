@@ -1,10 +1,9 @@
-import { vfTabs } from '@visual-framework/vf-tabs';
+import { graphql } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import * as React from "react";
-import { useEffect } from "react";
 import EBIPageContainer from "../components/EBIPageContainer";
-import SubmissionWizard from "../components/SubmissionWizard";
 import './styles.scss';
-import { graphql } from 'gatsby'
+
 
 // markup
 const NewsPage = ({ data }) => {
@@ -28,7 +27,7 @@ const NewsPage = ({ data }) => {
                         <a className="vf-tabs__link" href="#vf-tabs__section--1">News Overview</a>
                     </li>
                     <li className="vf-tabs__item">
-                        <a className="vf-tabs__link" href="#vf-tabs__section--2">News Archive</a>
+                        <a className="vf-tabs__link" href="#vf-tabs__section--2">Image Demo</a>
                     </li>
                     <li className="vf-tabs__item">
                         <a className="vf-tabs__link" href="#vf-tabs__section--3">Announcements</a>
@@ -39,7 +38,7 @@ const NewsPage = ({ data }) => {
             <div className="vf-tabs-content" data-vf-js-tabs-content>
                 <section className="vf-tabs__section" id="vf-tabs__section--1">
                     <h2>Overview</h2>
-                    {news.map(item => <div style={{ border: "1px solid lightgrey", padding: '1rem', marginBottom: '1rem' }}>
+                    {news.map(item => <div key={item.title} style={{ border: "1px solid lightgrey", padding: '1rem', marginBottom: '1rem' }}>
                         <a href={item.path}>
                             <img src={item.field_image.src} alt={item.field_image.alt} width="100px" />
                             <div><h2>{item.title}</h2></div>
@@ -48,8 +47,8 @@ const NewsPage = ({ data }) => {
                     </div>)}
                 </section>
                 <section className="vf-tabs__section" id="vf-tabs__section--2">
-                    <h2>Other Page</h2>
-                    <p>......</p>
+                    <h2>Image optimization</h2>
+                    <StaticImage src="../images/EBI_demo.jpg" alt="my image" />
                 </section>
                 <section className="vf-tabs__section" id="vf-tabs__section--3">
                     <h2>Yet Another Page</h2>
