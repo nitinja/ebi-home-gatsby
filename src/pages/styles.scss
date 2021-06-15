@@ -197,3 +197,8 @@ button {
 
 // ideally we don't need this, but there are some nested divs required for gatsby
 body { margin: 0; }
+
+.full-image {
+  width: 100%;
+  height: auto;
+}

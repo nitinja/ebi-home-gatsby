@@ -1,11 +1,18 @@
 import React from 'react';
 import { VFCard } from "./VFCard";
+import { StaticImage } from 'gatsby-plugin-image'
 
 export function EBICards() {
   return (
     <VFCard.Container>
       <VFCard
-        card_image='https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/ebi-working-from-home.png?force_format=jpg'
+        card_image_component={
+          <StaticImage
+            width={405}
+            src='../images/ebi-working-from-home.jpg'
+            alt='wfh'
+          />
+        }
         card_image__alt='Aerial image of EMBL-EBI South building on campus'
         card_heading='Life at EMBL-EBI'
         card_subheading=''
@@ -15,7 +22,14 @@ export function EBICards() {
         modifiers='vf-card--bordered'
       />
       <VFCard
-        card_image='https://www.ebi.ac.uk/sites/ebi.ac.uk/files/shared/images/PHOTOS/Data_Centre/EBI_Data_Centre_Best.jpg'
+        card_image_component={
+          <StaticImage
+            width={405}
+            height={ 225}
+            src='../images/EBI_Data_Centre_Best.jpg'
+            alt='wfh'
+          />
+        }
         card_image__alt='EMBL-EBI staff members'
         card_heading='Data Submission'
         card_subheading=''
@@ -26,7 +40,13 @@ export function EBICards() {
       />
 
       <VFCard
-        card_image='https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/AdobeStock_245533971_900x500.jpeg'
+        card_image_component={
+          <StaticImage
+            width={405}
+            src='../images/AdobeStock_245533971_900x500.jpeg'
+            alt='wfh'
+          />
+        }
         card_image__alt='Visual of the world with connecting lines'
         card_heading='Careers'
         card_subheading=''

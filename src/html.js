@@ -16,7 +16,7 @@ export default function HTML(props) {
         <div
           key={`body`}
           id="___gatsby"
-          class="vf-body | vf-stack vf-stack--400"
+          className="vf-body | vf-stack vf-stack--400"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}

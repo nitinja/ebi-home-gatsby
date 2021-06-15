@@ -3,6 +3,10 @@ import { EBICards } from "../components/EBICards";
 import EBIPageContainer from "../components/EBIPageContainer";
 import Events from "../components/Events";
 import News from "../components/News";
+import { StaticImage } from 'gatsby-plugin-image';
+import Logo from './EMBL_EBI_Logo_white.svg';
+
+
 import './styles.scss';
 
 // markup
@@ -12,12 +16,15 @@ const IndexPage = () => {
       <section className="vf-hero | vf-u-fullbleed" style={{ "--vf-hero--bg-image": "url('https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/EBI_webbanner_test_V3.jpg')", backgroundPosition: "initial" }}>
         <div className="vf-hero__content | vf-grid vf-grid__col-2" style={{ backgroundColor: 'transparent', color: '#fff', gridGap: 0, boxShadow: 'none' }}>
           <div className="vf-hero__content | vf-box | vf-stack vf-stack--400" style={{ backgroundColor: 'transparent', color: '#fff' }}>
-            <h2 className="vf-hero__heading"><img src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.svg" style={{ width: 280 }} alt="logo"></img></h2>
+            <h2 className="vf-hero__heading">
+              <img src={Logo} style={{ width: 280, height: 'auto' }} alt="logo"></img>
+            </h2>
+
 
             <p className="vf-hero__subheading">The home for big data in biology</p>
             <p className="vf-hero__text">We help scientists exploit complex information to make discoveries that benefit humankind.</p>
             <p className="vf-hero__text" style={{ paddingTop: 14, color: '#fff' }}>
-              <a style={{ color: '#fff', textDecoration: 'underline' }} href="//www.ebi.ac.uk/services/">Find tools and resources</a> or <a style={{ color: '#fff', textDecoration: 'underline' }} href="//www.ebi.ac.uk/submission/">deposit data</a>.
+              Demo: <a style={{ color: '#fff', textDecoration: 'underline' }} href="/submission">Data Submission</a>, <a style={{ color: '#fff', textDecoration: 'underline' }} href="/careers">Careers</a>, <a style={{ color: '#fff', textDecoration: 'underline' }} href="/news">News</a>.
           </p>
           </div>
           <form id="ebi_search" action="/ebisearch/search.ebi" className="vf-box" style={{ "color": "#222", height: 150 }}>
@@ -73,7 +80,11 @@ const IndexPage = () => {
         <div className="vf-grid__col--span-2">
           <h3>Featured Topic</h3>
           <article className="vf-card vf-card--brand vf-card--striped" style={{ backgroundColor: 'rgb(59,73,80)', '--vf-card-bg-color': 'rgb(59,73,80)' }}>
-            <img src="https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/Covid19_Data_Portal_screenshot.png" alt="covid portal" className="vf-card__image" loading="lazy" />
+            <StaticImage
+              src={'../images/Covid19_Data_Portal_screenshot.png'}
+              alt={'covid portal'}
+
+            />
             <div className="vf-card__content | vf-stack vf-stack--400">
               <h3 className="vf-card__heading"><a href="/news" className="vf-card__link">
                 Our coronavirus response

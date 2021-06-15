@@ -27,31 +27,31 @@ const Submission = () => {
         </div>
       </section>
 
-      <div class="vf-tabs">
-        <ul class="vf-tabs__list" data-vf-js-tabs>
-          <li class="vf-tabs__item">
-            <a class="vf-tabs__link" href="#vf-tabs__section--1">Data Submission</a>
+      <div className="vf-tabs">
+        <ul className="vf-tabs__list" data-vf-js-tabs>
+          <li className="vf-tabs__item">
+            <a className="vf-tabs__link" href="#vf-tabs__section--1">Data Submission</a>
           </li>
-          <li class="vf-tabs__item">
-            <a class="vf-tabs__link" href="#vf-tabs__section--2">Other Page</a>
+          <li className="vf-tabs__item">
+            <a className="vf-tabs__link" href="#vf-tabs__section--2">Other Page</a>
           </li>
-          <li class="vf-tabs__item">
-            <a class="vf-tabs__link" href="#vf-tabs__section--3">Yet Another Page</a>
+          <li className="vf-tabs__item">
+            <a className="vf-tabs__link" href="#vf-tabs__section--3">Yet Another Page</a>
           </li>
         </ul>
       </div>
 
-      <div class="vf-tabs-content" data-vf-js-tabs-content>
-        <section class="vf-tabs__section" id="vf-tabs__section--1">
+      <div className="vf-tabs-content" data-vf-js-tabs-content>
+        <section className="vf-tabs__section" id="vf-tabs__section--1">
           <h2>Data Submission</h2>
           <p>Use this data submission wizard to find the right archive for your data in a few simple steps.</p>
           <SubmissionWizard />
         </section>
-        <section class="vf-tabs__section" id="vf-tabs__section--2">
+        <section className="vf-tabs__section" id="vf-tabs__section--2">
           <h2>Other Page</h2>
           <p>......</p>
         </section>
-        <section class="vf-tabs__section" id="vf-tabs__section--3">
+        <section className="vf-tabs__section" id="vf-tabs__section--3">
           <h2>Yet Another Page</h2>
           <p>......</p>
         </section>

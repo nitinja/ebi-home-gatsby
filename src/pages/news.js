@@ -4,11 +4,13 @@ import { useEffect } from "react";
 import EBIPageContainer from "../components/EBIPageContainer";
 import SubmissionWizard from "../components/SubmissionWizard";
 import './styles.scss';
+import { graphql } from 'gatsby'
 
 // markup
-const NewsPage = () => {
-    useEffect(() => {
-    });
+const NewsPage = ({ data }) => {
+
+    const news = data.allNews.edges.map(({ node }) => node);
+
     return (
         <EBIPageContainer>
             <section className="vf-hero | vf-u-fullbleed" style={{ "--vf-hero--bg-image": "url('https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/EBI_webbanner_test_V3.jpg')", backgroundPosition: "initial" }}>
@@ -20,31 +22,36 @@ const NewsPage = () => {
                 </div>
             </section>
 
-            <div class="vf-tabs">
-                <ul class="vf-tabs__list" data-vf-js-tabs>
-                    <li class="vf-tabs__item">
-                        <a class="vf-tabs__link" href="#vf-tabs__section--1">News Overview</a>
+            <div className="vf-tabs">
+                <ul className="vf-tabs__list" data-vf-js-tabs>
+                    <li className="vf-tabs__item">
+                        <a className="vf-tabs__link" href="#vf-tabs__section--1">News Overview</a>
                     </li>
-                    <li class="vf-tabs__item">
-                        <a class="vf-tabs__link" href="#vf-tabs__section--2">News Archive</a>
+                    <li className="vf-tabs__item">
+                        <a className="vf-tabs__link" href="#vf-tabs__section--2">News Archive</a>
                     </li>
-                    <li class="vf-tabs__item">
-                        <a class="vf-tabs__link" href="#vf-tabs__section--3">Announcements</a>
+                    <li className="vf-tabs__item">
+                        <a className="vf-tabs__link" href="#vf-tabs__section--3">Announcements</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="vf-tabs-content" data-vf-js-tabs-content>
-                <section class="vf-tabs__section" id="vf-tabs__section--1">
-                    <h2>Data Submission</h2>
-                    <p>Use this data submission wizard to find the right archive for your data in a few simple steps.</p>
-                    <SubmissionWizard />
+            <div className="vf-tabs-content" data-vf-js-tabs-content>
+                <section className="vf-tabs__section" id="vf-tabs__section--1">
+                    <h2>Overview</h2>
+                    {news.map(item => <div style={{ border: "1px solid lightgrey", padding: '1rem', marginBottom: '1rem' }}>
+                        <a href={item.path}>
+                            <img src={item.field_image.src} alt={item.field_image.alt} width="100px" />
+                            <div><h2>{item.title}</h2></div>
+                            <div>{item.body}</div>
+                        </a>
+                    </div>)}
                 </section>
-                <section class="vf-tabs__section" id="vf-tabs__section--2">
+                <section className="vf-tabs__section" id="vf-tabs__section--2">
                     <h2>Other Page</h2>
                     <p>......</p>
                 </section>
-                <section class="vf-tabs__section" id="vf-tabs__section--3">
+                <section className="vf-tabs__section" id="vf-tabs__section--3">
                     <h2>Yet Another Page</h2>
                     <p>......</p>
                 </section>
@@ -53,5 +60,24 @@ const NewsPage = () => {
         </EBIPageContainer>
     )
 }
+
+export const query = graphql`
+query MyQuery {
+  allNews {
+    edges {
+      node {
+        id
+        title
+        body
+        path
+        field_image {
+          src
+          alt
+        }
+      }
+    }
+  }
+}
+`
 
 export default NewsPage

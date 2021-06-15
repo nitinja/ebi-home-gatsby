@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { VfClassNormalize } from '../helpers/helpers'
-
+import { StaticImage } from 'gatsby-plugin-image'
 export function VFCard({
   card_image,
+  card_image_component,
   card_image__alt,
   card_custom_aspect_ratio,
   card_heading,
@@ -30,12 +31,12 @@ export function VFCard({
       id={id}
       className={cardClasses}
       style={{ '--vf-card__image--aspect-ratio': card_custom_aspect_ratio }}>
+      {card_image_component}
       {card_image && (
         <img
           src={card_image}
           alt={card_image__alt}
           className='vf-card__image'
-          loading='lazy'
         />
       )}
       <div className='vf-card__content | vf-stack vf-stack--400'>

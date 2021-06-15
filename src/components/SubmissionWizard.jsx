@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './style.scss'
 
-const data = {
+const  data = {
   question: 'What type of data do you have?',
   choices: [
     {
@@ -54,7 +54,7 @@ const data = {
                 {
                   name: 'No',
                   next: {
-                    name: '4 Is your data specifically about variation?',
+                    question: 'Is your data specifically about variation?',
                     choices: [
                       {
                         name: 'Yes',
@@ -92,7 +92,7 @@ const data = {
                 {
                   name: 'Yes',
                   next: {
-                    name:
+                    question:
                       'To which type of study do your data most closely relate?',
                     choices: [
                       {
@@ -123,7 +123,7 @@ const data = {
                 {
                   name: 'No',
                   next: {
-                    name: '4 Is your data specifically about variation?',
+                    question: 'Is your data specifically about variation?',
                     choices: [
                       {
                         name: 'Yes',
@@ -165,12 +165,13 @@ export default function SubmissionWizard() {
       choices: data.choices,
     },
   ])
-  const selectChoice = choice => {
-      setLevels([...levels, choice.next || { destination: choice.destination }])
+  const selectChoice = (level, choice) => {
+    const allLevelsUptoThisLevel = levels.slice(0, levels.indexOf(level) + 1);
+      setLevels([...allLevelsUptoThisLevel, choice.next || { destination: choice.destination }])
   }
   return (
     <div style={{ marginBottom: '2rem' }}>
-      {levels.map((item, index) => item.destination ? renderDestination(item) : renderLevel(item, index + 1, selectChoice))}
+      {levels.map((item, index) => item.destination ? renderDestination(item, index + 1) : renderLevel(item, index + 1, selectChoice))}
     </div>
   )
 }
@@ -181,7 +182,8 @@ function renderLevel(level, index, selectChoice) {
       <div className='wizard-head-row'>
         <div className='num-round'>{index}</div>
         <div>
-          {level.question} || "You can submit your data to the following database:"
+          {/* LQ{ JSON.stringify(level)} */}
+          {level.question || "No question text:"}
         </div>
       </div>
       <div className='wizard-content-row'>
@@ -194,7 +196,7 @@ function renderLevel(level, index, selectChoice) {
               href='http://something'
               onClick={e => {
                 e.preventDefault()
-                selectChoice(choice)
+                selectChoice(level, choice)
               }}
               key={ choice.name}
               className='choice'>
@@ -206,8 +208,16 @@ function renderLevel(level, index, selectChoice) {
   )
 }
 
-function renderDestination({ destination }) {
-  return <div key={destination} className='destination'>
-        :::: <div>{destination} &gt;&gt;</div>
-    </div>;
+function renderDestination({ destination }, index) {
+  return (
+    <div key={index}>
+      <div className='wizard-head-row'>
+        <div className='num-round'>{index}</div>
+        <div>You can submit your data to the following database:</div>
+      </div>
+      <div className='wizard-content-row destination'>
+        <div>✅ {destination} </div>
+      </div>
+    </div>
+  )
 }
