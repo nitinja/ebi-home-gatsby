@@ -26,7 +26,7 @@
     cd my-gatsby-site/
     npm run develop
     ```
-    test commit
+    test commit 2
 
 3.  **Open the code and start customizing!**
 

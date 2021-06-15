@@ -40,7 +40,7 @@ const  data = {
                         destination: ' European Variation Archive',
                       },
                       {
-                        name: 'Genome-wide association study data',
+                        name: 'Genome-wide association study data test',
                         destination: 'GWAS Catalog',
                       },
                       {
