@@ -1,11 +1,9 @@
 import { vfTabs } from '@visual-framework/vf-tabs';
 import * as React from "react";
-import { Suspense, useEffect } from "react";
+import { useEffect } from "react";
 import EBIPageContainer from "../components/EBIPageContainer";
+import SubmissionWizard from "../components/SubmissionWizard";
 import './styles.scss';
-
-
-const LazySubmissionWizard = React.lazy(() => import('../components/SubmissionWizard'));
 
 // markup
 const Submission = () => {
@@ -47,9 +45,7 @@ const Submission = () => {
         <section className="vf-tabs__section" id="vf-tabs__section--1">
           <h2>Data Submission</h2>
           <p>Use this data submission wizard to find the right archive for your data in a few simple steps.</p>
-          <Suspense fallback={<div>Loading submission component...</div>}>
-            <LazySubmissionWizard />
-          </Suspense>
+          <SubmissionWizard />
         </section>
         <section className="vf-tabs__section" id="vf-tabs__section--2">
           <h2>Other Page</h2>
